@@ -22,29 +22,26 @@ const UserDashboard = () => {
             try {
 
                 setLoading(true);
+                setError('');
 
-                const queryParams =
-                    new URLSearchParams();
+                const params = new URLSearchParams();
 
                 if (searchText) {
-                    queryParams.append(
-                        searchBy,
-                        searchText
-                    );
+                    params.append(searchBy, searchText);
                 }
 
                 const response = await api.get(
-                    `/stores?${queryParams.toString()}`
+                    `/stores?${params.toString()}`
                 );
 
                 setStores(response.data);
 
-            } catch (error) {
+            } catch (err) {
 
-                console.error(error);
+                console.error(err);
 
                 setError(
-                    'Unable to load stores'
+                    'Failed to load stores'
                 );
 
             } finally {
@@ -69,26 +66,22 @@ const UserDashboard = () => {
                 { rating }
             );
 
-            const queryParams =
-                new URLSearchParams();
+            const params = new URLSearchParams();
 
             if (searchText) {
-                queryParams.append(
-                    searchBy,
-                    searchText
-                );
+                params.append(searchBy, searchText);
             }
 
             const response = await api.get(
-                `/stores?${queryParams.toString()}`
+                `/stores?${params.toString()}`
             );
 
             setStores(response.data);
 
-        } catch (error) {
+        } catch {
 
             alert(
-                'Unable to submit rating'
+                'Failed to submit rating'
             );
         }
     };
@@ -169,10 +162,9 @@ const StoreCard = ({
     onRate
 }) => {
 
-    const [rating, setRating] =
-        useState(
-            store.userSubmittedRating || 0
-        );
+    const [rating, setRating] = useState(
+        store.userSubmittedRating || 0
+    );
 
     const handleSubmit = () => {
 
