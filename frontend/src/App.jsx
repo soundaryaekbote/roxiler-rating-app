@@ -28,6 +28,7 @@ const ProtectedRoute = ({
     return children;
 };
 
+
 const DashboardRedirect = () => {
 
     const { user } = useAuth();
