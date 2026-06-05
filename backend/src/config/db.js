@@ -1,6 +1,6 @@
 const mysql = require('mysql2');
 
-const connectionPool = mysql.createPool({
+const dbPool = mysql.createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
@@ -11,9 +11,9 @@ const connectionPool = mysql.createPool({
     queueLimit: 0
 });
 
-connectionPool.getConnection((err, connection) => {
+dbPool.getConnection((err, connection) => {
     if (err) {
-        console.log('Database Connection Error:', err);
+        console.error('Database Connection Failed:', err);
         return;
     }
 
@@ -21,4 +21,4 @@ connectionPool.getConnection((err, connection) => {
     connection.release();
 });
 
-module.exports = connectionPool.promise();
+module.exports = dbPool.promise();
