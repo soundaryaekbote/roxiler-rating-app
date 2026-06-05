@@ -15,21 +15,21 @@ exports.createUserByAdmin = async (req, res) => {
         });
     }
 
-    // Name Validation
+    // Name checking
     if (name.length < 20 || name.length > 60) {
         return res.status(400).json({
             message: 'Name should be between 20 and 60 characters'
         });
     }
 
-    // Address Validation
+    // Address checking
     if (address.length > 400) {
         return res.status(400).json({
             message: 'Address cannot exceed 400 characters'
         });
     }
 
-    // Role Validation
+    // Role checking
     const allowedRoles = ['ADMIN', 'USER', 'OWNER'];
 
     if (!allowedRoles.includes(role.toUpperCase())) {
@@ -38,7 +38,7 @@ exports.createUserByAdmin = async (req, res) => {
         });
     }
 
-    // Password Validation
+    // Password checking
     if (!passwordRegex.test(password)) {
         return res.status(400).json({
             message:
@@ -89,7 +89,7 @@ exports.createUserByAdmin = async (req, res) => {
     }
 };
 
-// Get All Users (Admin Only)
+// Get admins only
 exports.getAllUsersByAdmin = async (req, res) => {
 
     const {
@@ -159,7 +159,7 @@ exports.getAllUsersByAdmin = async (req, res) => {
     }
 };
 
-// Get Single User Details
+// Single User Details
 exports.getUserByIdByAdmin = async (req, res) => {
 
     const { id } = req.params;
