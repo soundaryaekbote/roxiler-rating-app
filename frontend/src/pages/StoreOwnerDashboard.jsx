@@ -16,6 +16,7 @@ const StoreOwnerDashboard = () => {
 
         const loadStoreData = async () => {
 
+
             try {
 
                 const response = await api.get(
@@ -54,6 +55,7 @@ const StoreOwnerDashboard = () => {
         );
     }
 
+    
     if (error) {
 
         return (
