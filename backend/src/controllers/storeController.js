@@ -1,6 +1,6 @@
 const db = require('../config/db');
 
-// Create New Store (Admin Only)
+//  New Store (Admin Only)
 exports.createStoreByAdmin = async (req, res) => {
 
     const { name, email, address, owner_id } = req.body;
@@ -19,7 +19,7 @@ exports.createStoreByAdmin = async (req, res) => {
 
     try {
 
-        // Check if owner exists and has OWNER role
+        //owner exist or not 
         if (owner_id) {
 
             const [ownerData] = await db.query(
@@ -71,7 +71,7 @@ exports.createStoreByAdmin = async (req, res) => {
     }
 };
 
-// Dashboard Statistics
+// Dashboard 
 exports.getDashboardStats = async (req, res) => {
 
     try {
@@ -104,7 +104,7 @@ exports.getDashboardStats = async (req, res) => {
     }
 };
 
-// Get All Stores
+// All Stores
 exports.getAllStores = async (req, res) => {
 
     const {
@@ -197,7 +197,7 @@ exports.getAllStores = async (req, res) => {
     }
 };
 
-// Submit or Update Rating
+
 exports.submitOrUpdateRating = async (req, res) => {
 
     const { storeId } = req.params;
