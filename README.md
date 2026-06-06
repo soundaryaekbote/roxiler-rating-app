@@ -53,14 +53,14 @@ A Full Stack Web Application that allows users to submit and manage ratings for 
 
 ### Login Page
 
-![Login Page]
+
 <img width="1842" height="854" alt="Login" src="https://github.com/user-attachments/assets/59b883a0-0b93-4b8b-99a5-79d7f39f75f9" />
 
 ---
 
 ### Signup Page
 
-![Signup Page]
+
 <img width="1805" height="871" alt="signup" src="https://github.com/user-attachments/assets/ac90cfb1-b5ff-4f2c-9f64-042006ebbbd7" />
 
 
@@ -68,7 +68,7 @@ A Full Stack Web Application that allows users to submit and manage ratings for 
 
 ### User Dashboard
 
-![User Dashboard]
+
 <img width="1715" height="917" alt="user dashboard" src="https://github.com/user-attachments/assets/c90b7b00-7eb6-4d09-8f99-531b2d376142" />
 
 
@@ -76,14 +76,14 @@ A Full Stack Web Application that allows users to submit and manage ratings for 
 
 ### Admin Dashboard
 
-![Admin Dashboard]
+
 <img width="1798" height="875" alt="Admin dashboard" src="https://github.com/user-attachments/assets/8449fb20-7f16-4546-a399-9bb303f48686" />
 
 ---
 
 ### Store Owner Dashboard
 
-![Store Owner Dashboard]
+
 <img width="1683" height="934" alt="store dashboard" src="https://github.com/user-attachments/assets/e12a7ac4-e46d-44ee-ad1f-9664974f7a3f" />
 
 ---
